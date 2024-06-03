@@ -1,6 +1,13 @@
 .App {
-  text-align: center;
-  min-height: 100vh;
+  text-align: center !important;
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
 }
 
 .App-logo {
@@ -9,12 +16,14 @@
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  margin-bottom: 12px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: calc(10px + 2vmin) !important;
+  margin-bottom: 12px !important;
+  flex-wrap: wrap !important;
+  margin-top: 20px !important;
 }
 
 .App-link {
@@ -30,13 +39,37 @@
 }
 
 .Stream-button {
-  margin-bottom: 12px;
+  font-family: "ui-monospace", "SFMono-Regular", "SF Mono", "Menlo", "Consolas",
+    "Liberation Mono", monospace !important;
+  font-size: 12px !important;
+  appearance: none !important;
+  background-color: transparent !important;
+  border: 1px solid #666 !important;
+  border-radius: 2px !important;
+  padding: 6px 10px !important;
+  color: #f4f5f6 !important;
+  cursor: pointer !important;
+  margin-right: 4px !important;
+  margin-left: 4px !important;
+  outline: none !important;
+  user-select: none !important;
+  height: 32px !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.Stream-button:hover {
+  color: #242526 !important;
+  background-color: #f4f5f6 !important;
+  border-color: #f4f5f6 !important;
 }
 
 .Graph {
-  min-height: 50vh;
-  width: 700px;
+  min-height: 70vh;
+  width: 800px;
+  margin-top: 12px;
   margin-bottom: 12px;
+  color: white;
 }
 
 @keyframes App-logo-spin {

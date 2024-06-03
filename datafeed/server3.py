@@ -61,15 +61,15 @@ OVERLAP = 4
 
 def bwalk(min, max, std):
     """ Generates a bounded random walk. """
+    """ Simulate fluctuations in market prices and spreads within defined bounds"""
     rng = max - min
     while True:
         max += normalvariate(0, std)
         yield abs((max % (rng * 2)) - rng) + min
 
 def market(t0 = MARKET_OPEN):
-    """ Generates a random series of market conditions,
-        (time, price, spread).
-    """
+    """ Generates a random series of market conditions, (time, price, spread). """
+    """ Simulates a continuous stream of market data """
     for hours, px, spd in zip(bwalk(*FREQ), bwalk(*PX), bwalk(*SPD)):
         yield t0, px, spd
         t0 += timedelta(hours = abs(hours))
@@ -143,6 +143,7 @@ def order_book(orders, book, stock_name):
 
 def generate_csv():
     """ Generate a CSV of order history. """
+    """ This allows the simulation data to be stored and reviewed. """
     with open('test.csv', 'wb') as f:
         writer = csv.writer(f)
         for t, stock, side, order, size in orders(market()):
