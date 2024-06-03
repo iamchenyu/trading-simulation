@@ -1,2 +1,15 @@
-DEMO
-![demo]('./resources/demo.gif')
+# DEMO
+
+![demo](resources/demo.gif)
+
+# GET STARTED
+## server
+`python3 -m venv .venv`
+
+`source .venv/bin/activate`
+
+`pip install -r datafeed/requirements.txt`
+## UI
+`npm i`
+
+`npm start`
