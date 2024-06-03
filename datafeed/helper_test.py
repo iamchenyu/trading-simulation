@@ -1,7 +1,7 @@
 import unittest
 from io import StringIO
 import sys
-from client3 import getDataPoint, getRatio
+from datafeed.helper import getDataPoint, getRatio
 
 class ClientTest(unittest.TestCase):
   def test_getDataPoint_calculatePrice(self):
